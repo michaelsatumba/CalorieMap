@@ -1,9 +1,4 @@
-//
-//  GoalsViewController.swift
-//  CalorieMap
-//
-//  Created by Jarrett Zapata on 5/2/22.
-//
+
 
 import UIKit
 
@@ -89,7 +84,7 @@ class GoalsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    // MARK: - Core Data
+    //  Core Data
     
     func getAllGoals() {
         do {

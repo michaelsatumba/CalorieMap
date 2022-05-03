@@ -1,9 +1,4 @@
-//
-//  StepsViewController.swift
-//  CalorieMap
-//
-//  Created by Jarrett Zapata on 5/2/22.
-//
+
 
 import UIKit
 import HealthKit

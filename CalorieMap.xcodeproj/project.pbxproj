@@ -18,6 +18,10 @@
 		C78438202820835F004BD04C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784381F2820835F004BD04C /* HealthKit.framework */; };
 		C7843822282084BF004BD04C /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7843821282084BF004BD04C /* StepsViewController.swift */; };
 		F84EED9E2820A9E40076C549 /* CalorieMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EED9D2820A9E40076C549 /* CalorieMapViewController.swift */; };
+		F84EEDA02821898E0076C549 /* LocationRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EED9F2821898E0076C549 /* LocationRequestController.swift */; };
+		F84EEDA228218A0D0076C549 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EEDA128218A0C0076C549 /* SearchCell.swift */; };
+		F84EEDA428218A270076C549 /* SearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EEDA328218A270076C549 /* SearchInputView.swift */; };
+		F84EEDA628218A600076C549 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EEDA528218A600076C549 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		C784381F2820835F004BD04C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C7843821282084BF004BD04C /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		F84EED9D2820A9E40076C549 /* CalorieMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieMapViewController.swift; sourceTree = "<group>"; };
+		F84EED9F2821898E0076C549 /* LocationRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestController.swift; sourceTree = "<group>"; };
+		F84EEDA128218A0C0076C549 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		F84EEDA328218A270076C549 /* SearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInputView.swift; sourceTree = "<group>"; };
+		F84EEDA528218A600076C549 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 				C784381B282069A3004BD04C /* GoalsViewController.swift */,
 				C7843821282084BF004BD04C /* StepsViewController.swift */,
 				F84EED9D2820A9E40076C549 /* CalorieMapViewController.swift */,
+				F84EED9F2821898E0076C549 /* LocationRequestController.swift */,
+				F84EEDA128218A0C0076C549 /* SearchCell.swift */,
+				F84EEDA328218A270076C549 /* SearchInputView.swift */,
+				F84EEDA528218A600076C549 /* Extensions.swift */,
 			);
 			path = CalorieMap;
 			sourceTree = "<group>";
@@ -164,13 +176,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84EEDA02821898E0076C549 /* LocationRequestController.swift in Sources */,
 				C784380F282043D8004BD04C /* CalorieMap.xcdatamodeld in Sources */,
 				C7843809282043D8004BD04C /* MainMenuViewController.swift in Sources */,
 				C7843805282043D8004BD04C /* AppDelegate.swift in Sources */,
+				F84EEDA228218A0D0076C549 /* SearchCell.swift in Sources */,
 				C7843807282043D8004BD04C /* SceneDelegate.swift in Sources */,
 				C7843822282084BF004BD04C /* StepsViewController.swift in Sources */,
 				C784381C282069A3004BD04C /* GoalsViewController.swift in Sources */,
 				F84EED9E2820A9E40076C549 /* CalorieMapViewController.swift in Sources */,
+				F84EEDA628218A600076C549 /* Extensions.swift in Sources */,
+				F84EEDA428218A270076C549 /* SearchInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

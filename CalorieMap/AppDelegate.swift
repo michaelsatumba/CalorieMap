@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  CalorieMap
-//
-//  Created by Jarrett Zapata on 5/2/22.
-//
+
 
 import UIKit
 import CoreData
@@ -18,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    // UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
@@ -32,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    // MARK: - Core Data stack
+    //  Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -61,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
 
-    // MARK: - Core Data Saving support
+    //  Core Data Saving support
 
     func saveContext () {
         let context = persistentContainer.viewContext
