@@ -15,6 +15,6 @@ An app that tracks calories expended given a point a to point b like google maps
 
 ## Wireframes
 
-![Basic UI](/images/wireframe1.png)
+![Basic UI](<./images/wireframe1.png>)
 
-![Gender chosen and calorie output given gender](/images/wireframe2.png)
+![Gender chosen and calorie output given gender](images/wireframe2.png)
