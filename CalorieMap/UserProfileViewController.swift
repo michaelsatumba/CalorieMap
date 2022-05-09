@@ -21,8 +21,12 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         userProfileTable.delegate = self
         userProfileTable.dataSource = self
         getUserProfile()
+        if (userProfile.isEmpty) {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
+        } else {
+            self.userNameLabel.text = userProfile[0].name
+        }
         userProfileTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
     }
     
     @objc private func didTapAdd() {
@@ -78,11 +82,27 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        if (userProfile.isEmpty) {
+            return cell
+        } else {
+            switch indexPath.row {
+            case 0:
+                cell.textLabel?.text = "Age: " + String(userProfile[0].age)
+            case 1:
+                cell.textLabel?.text = "Weight: " + String(userProfile[0].weight)
+            case 2:
+                cell.textLabel?.text = "Height: " + String(userProfile[0].height)
+            case 3:
+                cell.textLabel?.text = "Gender: " + userProfile[0].gender!
+            default:
+                print("Empty cell")
+            }
+        }
         return cell
     }
     
