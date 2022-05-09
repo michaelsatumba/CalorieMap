@@ -98,17 +98,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-hY-P6l">
-                                <rect key="frame" x="136" y="249" width="143" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-hY-P6l">
+                                <rect key="frame" x="100" y="249" width="214" height="103"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps Taken Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmW-qK-KeO">
-                                <rect key="frame" x="136" y="202" width="143" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps Taken Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmW-qK-KeO">
+                                <rect key="frame" x="50" y="188" width="314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,6 +114,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2k0-5I-PLM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2k0-5I-PLM" firstAttribute="trailing" secondItem="MVF-hY-P6l" secondAttribute="trailing" constant="100" id="2cO-1p-qtN"/>
+                            <constraint firstItem="2k0-5I-PLM" firstAttribute="trailing" secondItem="qmW-qK-KeO" secondAttribute="trailing" constant="50" id="Fu5-0E-mi9"/>
+                            <constraint firstItem="qmW-qK-KeO" firstAttribute="leading" secondItem="2k0-5I-PLM" secondAttribute="leading" constant="50" id="NUd-jZ-cul"/>
+                            <constraint firstItem="MVF-hY-P6l" firstAttribute="top" secondItem="qmW-qK-KeO" secondAttribute="bottom" constant="40" id="QiZ-f8-Gba"/>
+                            <constraint firstItem="qmW-qK-KeO" firstAttribute="top" secondItem="2k0-5I-PLM" secondAttribute="top" constant="100" id="gcS-xj-FLx"/>
+                            <constraint firstItem="MVF-hY-P6l" firstAttribute="leading" secondItem="2k0-5I-PLM" secondAttribute="leading" constant="100" id="yjp-sc-Vcl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DwM-iS-gp6"/>
                     <connections>
