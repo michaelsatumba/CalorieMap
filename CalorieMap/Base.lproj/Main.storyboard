@@ -156,14 +156,40 @@
                     <view key="view" contentMode="scaleToFill" id="M5p-eu-aeb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UVN-MQ-tf1">
+                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7x-MN-3oQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VKB-nV-gZ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VKB-nV-gZ0" firstAttribute="trailing" secondItem="W7x-MN-3oQ" secondAttribute="trailing" id="3sN-H2-abr"/>
+                            <constraint firstItem="UVN-MQ-tf1" firstAttribute="top" secondItem="W7x-MN-3oQ" secondAttribute="bottom" id="DY2-6y-er4"/>
+                            <constraint firstItem="VKB-nV-gZ0" firstAttribute="bottom" secondItem="UVN-MQ-tf1" secondAttribute="bottom" id="Pd6-zh-tKx"/>
+                            <constraint firstItem="UVN-MQ-tf1" firstAttribute="leading" secondItem="VKB-nV-gZ0" secondAttribute="leading" id="UqR-Sp-Zzt"/>
+                            <constraint firstItem="VKB-nV-gZ0" firstAttribute="trailing" secondItem="UVN-MQ-tf1" secondAttribute="trailing" id="VO8-p7-AeT"/>
+                            <constraint firstItem="W7x-MN-3oQ" firstAttribute="top" secondItem="VKB-nV-gZ0" secondAttribute="top" id="aMp-GE-Hhj"/>
+                            <constraint firstItem="UVN-MQ-tf1" firstAttribute="top" secondItem="VKB-nV-gZ0" secondAttribute="top" constant="100" id="jhF-uZ-zan"/>
+                            <constraint firstItem="W7x-MN-3oQ" firstAttribute="leading" secondItem="VKB-nV-gZ0" secondAttribute="leading" id="siD-cc-Vol"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4od-wb-zrl"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="W7x-MN-3oQ" id="6Tx-XD-THx"/>
+                        <outlet property="userProfileTable" destination="UVN-MQ-tf1" id="o0c-nF-nvg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYZ-dV-dSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="772"/>
+            <point key="canvasLocation" x="195.6521739130435" y="771.42857142857144"/>
         </scene>
     </scenes>
     <resources>
