@@ -25,8 +25,29 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         } else {
             self.userNameLabel.text = userProfile[0].name
+            self.setupLabelTap()
         }
         userProfileTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "Edit Name", message: "Edit Name", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        alert.textFields?.first?.text = self.userProfile[0].name
+        alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
+            guard let field = alert.textFields?.first, let newName = field.text, !newName.isEmpty else {
+                return
+            }
+            
+            self?.updateUserProfileName(newName: newName)
+        }))
+        self.present(alert, animated: true)
+    }
+        
+    func setupLabelTap() {
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped(_:)))
+        self.userNameLabel.isUserInteractionEnabled = true
+        self.userNameLabel.addGestureRecognizer(labelTap)
     }
     
     @objc private func didTapAdd() {
@@ -106,9 +127,64 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (userProfile.isEmpty != true) {
+            switch indexPath.row {
+            case 0:
+                let alert = UIAlertController(title: "Edit Age", message: "Edit Age", preferredStyle: .alert)
+                alert.addTextField(configurationHandler: nil)
+                alert.textFields?.first?.text = String(self.userProfile[0].age)
+                alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
+                    guard let field = alert.textFields?.first, let newAge = field.text, !newAge.isEmpty else {
+                        return
+                    }
+                    
+                    self?.updateUserProfileAge(newAge: Int16(newAge)!)
+                }))
+                self.present(alert, animated: true)
+            case 1:
+                let alert = UIAlertController(title: "Edit Weight", message: "Edit Weight", preferredStyle: .alert)
+                alert.addTextField(configurationHandler: nil)
+                alert.textFields?.first?.text = String(self.userProfile[0].weight)
+                alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
+                    guard let field = alert.textFields?.first, let newWeight = field.text, !newWeight.isEmpty else {
+                        return
+                    }
+                    
+                    self?.updateUserProfileWeight(newWeight: Int16(newWeight)!)
+                }))
+                self.present(alert, animated: true)
+            case 2:
+                let alert = UIAlertController(title: "Edit Height", message: "Edit Height", preferredStyle: .alert)
+                alert.addTextField(configurationHandler: nil)
+                alert.textFields?.first?.text = String(self.userProfile[0].height)
+                alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
+                    guard let field = alert.textFields?.first, let newHeight = field.text, !newHeight.isEmpty else {
+                        return
+                    }
+                    
+                    self?.updateUserProfileHeight(newHeight: Int16(newHeight)!)
+                }))
+                self.present(alert, animated: true)
+            case 3:
+                let alert = UIAlertController(title: "Edit Gender", message: "Edit Gender", preferredStyle: .alert)
+                alert.addTextField(configurationHandler: nil)
+                alert.textFields?.first?.text = self.userProfile[0].gender
+                alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
+                    guard let field = alert.textFields?.first, let newGender = field.text, !newGender.isEmpty else {
+                        return
+                    }
+                    
+                    self?.updateUserProfileGender(newGender: newGender)
+                }))
+                self.present(alert, animated: true)
+            default:
+                print("Nothing to edit")
+            }
+        }
+    }
+    
     func createUserProfile(userName:String, age:Int16, weight:Int16, height:Int16, gender:String) {
-//        let newGoal = GoalEntry(context: context)
-//        newGoal.goalDescription = goalDescription
         let newUserProfile = UserProfile(context: context)
         newUserProfile.name = userName
         newUserProfile.age = age
@@ -124,16 +200,60 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-//    func updateGoalDescription(item: GoalEntry, newDescription: String) {
-//        item.goalDescription = newDescription
-//
-//        do {
-//            try context.save()
-//            getAllGoals()
-//        } catch {
-//
-//        }
-//    }
+    func updateUserProfileName(newName: String) {
+        userProfile[0].name = newName
+        
+        do {
+            try context.save()
+            getUserProfile()
+        } catch {
+
+        }
+    }
+    
+    func updateUserProfileAge(newAge: Int16) {
+        userProfile[0].age = newAge
+        
+        do {
+            try context.save()
+            getUserProfile()
+        } catch {
+
+        }
+    }
+    
+    func updateUserProfileWeight(newWeight: Int16) {
+        userProfile[0].weight = newWeight
+        
+        do {
+            try context.save()
+            getUserProfile()
+        } catch {
+
+        }
+    }
+    
+    func updateUserProfileHeight(newHeight: Int16) {
+        userProfile[0].height = newHeight
+        
+        do {
+            try context.save()
+            getUserProfile()
+        } catch {
+
+        }
+    }
+    
+    func updateUserProfileGender(newGender: String) {
+        userProfile[0].gender = newGender
+        
+        do {
+            try context.save()
+            getUserProfile()
+        } catch {
+
+        }
+    }
 
     
 }
