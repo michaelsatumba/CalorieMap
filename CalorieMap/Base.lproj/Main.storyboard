@@ -37,6 +37,7 @@
                         <segue destination="bJ1-8z-jZr" kind="show" identifier="goalsViewSegue" id="dAA-Vi-VPJ"/>
                         <segue destination="JON-YG-g1k" kind="show" identifier="stepsSegue" id="3BH-QI-6bV"/>
                         <segue destination="bO0-rQ-hkd" kind="show" identifier="calorieMapViewSegue" id="liI-1e-7pO"/>
+                        <segue destination="dC7-N0-68L" kind="show" identifier="userProfileSegue" id="qla-6p-V8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,6 +148,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akl-6y-pgu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-648" y="-561"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="XPa-0C-YGa">
+            <objects>
+                <viewController id="dC7-N0-68L" customClass="UserProfileViewController" customModule="CalorieMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M5p-eu-aeb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VKB-nV-gZ0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4od-wb-zrl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYZ-dV-dSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="772"/>
         </scene>
     </scenes>
     <resources>

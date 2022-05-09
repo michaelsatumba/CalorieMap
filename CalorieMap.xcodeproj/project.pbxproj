@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C75983E92829A259008F1CCB /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75983E82829A259008F1CCB /* UserProfileViewController.swift */; };
 		C7843805282043D8004BD04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7843804282043D8004BD04C /* AppDelegate.swift */; };
 		C7843807282043D8004BD04C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7843806282043D8004BD04C /* SceneDelegate.swift */; };
 		C7843809282043D8004BD04C /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7843808282043D8004BD04C /* MainMenuViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C75983E82829A259008F1CCB /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C7843801282043D8004BD04C /* CalorieMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7843804282043D8004BD04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7843806282043D8004BD04C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				F84EEDA128218A0C0076C549 /* SearchCell.swift */,
 				F84EEDA328218A270076C549 /* SearchInputView.swift */,
 				F84EEDA528218A600076C549 /* Extensions.swift */,
+				C75983E82829A259008F1CCB /* UserProfileViewController.swift */,
 			);
 			path = CalorieMap;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F84EEDA02821898E0076C549 /* LocationRequestController.swift in Sources */,
+				C75983E92829A259008F1CCB /* UserProfileViewController.swift in Sources */,
 				C784380F282043D8004BD04C /* CalorieMap.xcdatamodeld in Sources */,
 				C7843809282043D8004BD04C /* MainMenuViewController.swift in Sources */,
 				C7843805282043D8004BD04C /* AppDelegate.swift in Sources */,

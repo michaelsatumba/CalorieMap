@@ -34,6 +34,8 @@ class MainMenuViewController: UIViewController, UITableViewDelegate, UITableView
         switch viewSelectionSegueIdentifier {
         case "Calorie Map":
             performSegue(withIdentifier: "calorieMapViewSegue", sender: indexPath)
+        case "User Profile":
+            performSegue(withIdentifier: "userProfileSegue", sender: indexPath)
         case "Goals":
             performSegue(withIdentifier: "goalsViewSegue", sender: indexPath)
         case "Steps":
