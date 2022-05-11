@@ -50,7 +50,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Simulator Screen Shot - iPhone 11 - 2022-05-11 at 11.58.42.png)
+![](./screenshot.png)
 
 
 ## Our process
