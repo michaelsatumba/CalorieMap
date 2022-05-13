@@ -6,7 +6,7 @@ class MainMenuViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var viewSelectorTable: UITableView!
     
-    var viewSelectionSegueIdentifiers:[String] = ["Calorie Map","User Profile", "Goals","Steps", "Calories Burned"];
+    var viewSelectionSegueIdentifiers:[String] = ["Calorie Map","User Profile", "Goals","Steps"];
     
     override func viewDidLoad() {
         title = "Calorie Tracker"
