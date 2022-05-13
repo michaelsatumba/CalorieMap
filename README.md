@@ -63,7 +63,8 @@ Set up navigation controller, attach appropriate segues, make the map and search
 
 ### What we learned
 
-
+- How to integrate apple maps
+- How to integrate health kit
 
 ### Continued development
 
